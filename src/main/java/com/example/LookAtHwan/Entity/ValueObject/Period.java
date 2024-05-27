@@ -18,11 +18,6 @@ public class Period {
 
     public Period() {}
 
-
-
-
-
-
     public LocalDateTime getCreateDt() {
         return createDt;
     }

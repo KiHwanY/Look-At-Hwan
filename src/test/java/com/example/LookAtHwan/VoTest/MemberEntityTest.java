@@ -23,8 +23,9 @@ public class MemberEntityTest {
     @Test
     public void insertMember() {
         IntStream.rangeClosed(1, 10).forEach(i -> {
-
-            MemberVO member = MemberVO.builder().userNm("period" + i).period(new Period()).
+            Period test = new Period();
+            test.setCreateDt(LocalDateTime.now());
+            MemberVO member = MemberVO.builder().userNm("period" + i).period(test).
                     build();
 
             memberRepository.save(member);
@@ -47,8 +48,10 @@ public class MemberEntityTest {
     }
     @Test
     public void UpdateMemberTest(){
-        LocalDateTime now =LocalDateTime.now();
-        MemberVO member = MemberVO.builder().userKey(8L).userNm("LocalTimeTest").
+        Period test = new Period();
+        test.setUpdateDt(LocalDateTime.now());
+
+        MemberVO member = MemberVO.builder().userKey(30L).userNm("ValueObjectUpdateTest").period(test).
                 build();
 
         memberRepository.save(member);
