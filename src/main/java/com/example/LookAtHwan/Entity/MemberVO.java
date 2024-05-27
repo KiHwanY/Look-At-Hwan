@@ -33,12 +33,12 @@ public class MemberVO {
 //    private String userPhone; // 전화번호
 //    @Column(length = 1 , name = "USER_CK")
 //    private String userCk; // 회원 권한
-//    @Column(length = 6 , name = "ZIPCODE")
-//    private int zipcode; // 우편 번호
-//    @Column(length = 100 , name ="ADDRESS_BASIC" )
-//    private String addrBasic; // 기본 주소
-//    @Column(length = 100 , name = "ADDRESS_DETAIL")
-//    private String addrDetail; // 상세 주소
+    @Column(length = 6 , name = "ZIPCODE")
+    private Integer zipcode; // 우편 번호
+    @Column(length = 100 , name ="ADDRESS_BASIC" )
+    private String addrBasic; // 기본 주소
+    @Column(length = 100 , name = "ADDRESS_DETAIL")
+    private String addrDetail; // 상세 주소
 //    @Column(name = "CREATE_DATE")
 //    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
 //    private LocalDateTime createDt; // 생성 일자

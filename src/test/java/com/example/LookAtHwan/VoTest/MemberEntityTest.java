@@ -51,7 +51,7 @@ public class MemberEntityTest {
         Period test = new Period();
         test.setUpdateDt(LocalDateTime.now());
 
-        MemberVO member = MemberVO.builder().userKey(30L).userNm("ValueObjectUpdateTest").period(test).
+        MemberVO member = MemberVO.builder().userKey(30L).userNm("ValueObjectUpdateTest").period(test).zipcode(123456).addrBasic("테스트동").addrDetail("103동 1005호").
                 build();
 
         memberRepository.save(member);
