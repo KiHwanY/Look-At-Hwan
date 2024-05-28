@@ -1,16 +1,13 @@
 package com.example.LookAtHwan.VoTest;
 
 import com.example.LookAtHwan.Entity.MemberVO;
-import com.example.LookAtHwan.Entity.User;
 import com.example.LookAtHwan.Entity.ValueObject.Period;
 import com.example.LookAtHwan.Repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.lang.reflect.Member;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
