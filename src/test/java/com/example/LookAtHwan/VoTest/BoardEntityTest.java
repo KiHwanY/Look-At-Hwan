@@ -1,5 +1,6 @@
 package com.example.LookAtHwan.VoTest;
 
+import com.example.LookAtHwan.Entity.BoardVO;
 import com.example.LookAtHwan.Entity.ProductVO;
 import com.example.LookAtHwan.Entity.ValueObject.Period;
 import com.example.LookAtHwan.Repository.BoardRepository;
@@ -17,19 +18,19 @@ public class BoardEntityTest {
     @Autowired
     BoardRepository boardRepository;
 
-//
-//    @Test
-//    public void insertProduct() {
-//        IntStream.rangeClosed(1, 10).forEach(i -> {
-//            Period test = new Period();
-//            test.setCreateDt(LocalDateTime.now());
-//            ProductVO product = ProductVO.builder().proNm("period" + i).period(test).
-//                    build();
-//
-//            productRepository.save(product);
-//        });
-//    }
-//
+
+    @Test
+    public void insertBoardTest() {
+        IntStream.rangeClosed(1, 10).forEach(i -> {
+            Period test = new Period();
+            test.setCreateDt(LocalDateTime.now());
+            BoardVO board = BoardVO.builder().bTitle("period" + i).period(test).
+                    build();
+
+            boardRepository.save(board);
+        });
+    }
+
 //    @Test
 //    public void SelectProductTest(){
 //

@@ -1,5 +1,6 @@
 package com.example.LookAtHwan.Entity;
 
+import com.example.LookAtHwan.Entity.ValueObject.Period;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,6 +31,8 @@ public class BoardVO {
     private String bContent;
     @Column(name = "RATE")
     private Integer rate;
+    @Embedded
+    private Period period;
 
 
 }
