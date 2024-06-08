@@ -31,20 +31,20 @@ public class BoardEntityTest {
         });
     }
 
-//    @Test
-//    public void SelectProductTest(){
-//
-//        Long id = 9L;
-//
-//        Optional<ProductVO> result = productRepository.findById(id);
-//
-//        System.out.println("==================================");
-//
-//        if(result.isPresent()){
-//            ProductVO product = result.get();
-//            System.out.println(product);
-//        }
-//    }
+    @Test
+    public void SelectBoardTest(){
+
+        Long id = 9L;
+
+        Optional<BoardVO> result = boardRepository.findById(id);
+
+        System.out.println("==================================");
+
+        if(result.isPresent()){
+            BoardVO board = result.get();
+            System.out.println(board);
+        }
+    }
 //    @Test
 //    public void UpdateProductTest(){
 //        Period test = new Period();
