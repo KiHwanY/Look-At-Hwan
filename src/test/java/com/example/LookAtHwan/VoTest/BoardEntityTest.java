@@ -1,7 +1,6 @@
 package com.example.LookAtHwan.VoTest;
 
 import com.example.LookAtHwan.Entity.BoardVO;
-import com.example.LookAtHwan.Entity.ProductVO;
 import com.example.LookAtHwan.Entity.ValueObject.Period;
 import com.example.LookAtHwan.Repository.BoardRepository;
 import org.junit.jupiter.api.Test;
