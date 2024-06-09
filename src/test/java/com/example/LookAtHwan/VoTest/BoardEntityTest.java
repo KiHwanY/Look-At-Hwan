@@ -45,16 +45,16 @@ public class BoardEntityTest {
             System.out.println(board);
         }
     }
-//    @Test
-//    public void UpdateProductTest(){
-//        Period test = new Period();
-//        test.setUpdateDt(LocalDateTime.now());
-//
-//        ProductVO product = ProductVO.builder().proKey(10L).proNm("ValueObjectUpdateTest").period(test).
-//                build();
-//
-//        productRepository.save(product);
-//    }
+    @Test
+    public void UpdateBoardTest(){
+        Period test = new Period();
+        test.setUpdateDt(LocalDateTime.now());
+
+        BoardVO board = BoardVO.builder().bKey(10L).bTitle("ValueObjectUpdateTest").period(test).
+                build();
+
+        boardRepository.save(board);
+    }
 //    @Test
 //    public void DeleteProductTest(){
 //        Long id = 10L;
