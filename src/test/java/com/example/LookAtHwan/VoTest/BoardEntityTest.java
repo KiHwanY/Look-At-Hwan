@@ -55,11 +55,11 @@ public class BoardEntityTest {
 
         boardRepository.save(board);
     }
-//    @Test
-//    public void DeleteProductTest(){
-//        Long id = 10L;
-//
-//        productRepository.deleteById(id);
-//    }
+    @Test
+    public void DeleteBoardTest(){
+        Long id = 10L;
+
+        boardRepository.deleteById(id);
+    }
 
 }
