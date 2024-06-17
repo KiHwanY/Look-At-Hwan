@@ -1,8 +1,7 @@
 package com.example.LookAtHwan.VoTest;
 
-import com.example.LookAtHwan.Entity.BoardVO;
+import com.example.LookAtHwan.Entity.CommentsVO;
 import com.example.LookAtHwan.Entity.ValueObject.Period;
-import com.example.LookAtHwan.Repository.BoardRepository;
 import com.example.LookAtHwan.Repository.CommentsRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,46 +19,46 @@ public class CommentsEntityTest {
 
 
     @Test
-    public void insertBoardTest() {
+    public void insertCommentsTest() {
         IntStream.rangeClosed(1, 10).forEach(i -> {
             Period test = new Period();
             test.setCreateDt(LocalDateTime.now());
-            BoardVO board = BoardVO.builder().bTitle("period" + i).period(test).
+            CommentsVO comment = CommentsVO.builder().cWriter("period" + i).period(test).
                     build();
 
-            boardRepository.save(board);
+            comments.save(comment);
         });
     }
 
     @Test
-    public void SelectBoardTest(){
+    public void SelectCommentsTest(){
 
         Long id = 9L;
 
-        Optional<BoardVO> result = boardRepository.findById(id);
+        Optional<CommentsVO> result = comments.findById(id);
 
         System.out.println("==================================");
 
         if(result.isPresent()){
-            BoardVO board = result.get();
-            System.out.println(board);
+            CommentsVO comment = result.get();
+            System.out.println(comment);
         }
     }
     @Test
-    public void UpdateBoardTest(){
+    public void UpdateCommentsTest(){
         Period test = new Period();
         test.setUpdateDt(LocalDateTime.now());
 
-        BoardVO board = BoardVO.builder().bKey(10L).bTitle("ValueObjectUpdateTest").period(test).
+        CommentsVO board = CommentsVO.builder().cKey(10L).cWriter("ValueObjectUpdateTest").period(test).
                 build();
 
-        boardRepository.save(board);
+        comments.save(board);
     }
     @Test
-    public void DeleteBoardTest(){
+    public void DeleteCommentsTest(){
         Long id = 10L;
 
-        boardRepository.deleteById(id);
+        comments.deleteById(id);
     }
 
 }
