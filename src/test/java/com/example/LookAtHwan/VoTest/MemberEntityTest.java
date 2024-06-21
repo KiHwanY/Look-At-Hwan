@@ -19,14 +19,18 @@ public class MemberEntityTest {
 
     @Test
     public void insertMember() {
-        IntStream.rangeClosed(1, 10).forEach(i -> {
-            Period test = new Period();
+//        IntStream.rangeClosed(1, 10).forEach(i -> {
+//            Period test = new Period();
+//            test.setCreateDt(LocalDateTime.now());
+//            MemberVO member = MemberVO.builder().userId("period" + i).period(test).
+//                    build();
+           Period test = new Period();
             test.setCreateDt(LocalDateTime.now());
-            MemberVO member = MemberVO.builder().userNm("period" + i).period(test).
+            MemberVO member = MemberVO.builder().userId("user").userPw("1234").period(test).
                     build();
 
-            memberRepository.save(member);
-        });
+        memberRepository.save(member);
+//        });
     }
 
     @Test

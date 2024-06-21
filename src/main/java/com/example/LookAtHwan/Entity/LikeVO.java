@@ -3,6 +3,7 @@ package com.example.LookAtHwan.Entity;
 import com.example.LookAtHwan.Entity.ValueObject.Period;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LikeVO {
-
+    @Id
+    private Long id;
     @Embedded
     private Period period;
 
